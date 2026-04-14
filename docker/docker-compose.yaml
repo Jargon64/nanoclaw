@@ -1,0 +1,13 @@
+services:
+  nanoclaw:
+    image: registry.jarg.dev/nanoclaw-jargon:latest
+    container_name: nanoclaw
+    environment:
+      - GH_TOKEN=${GH_TOKEN}
+    volumes:
+      - nanoclaw-data:/app/nanoclaw
+      - docker-data:/var/lib/docker
+
+volumes:
+  nanoclaw-data:
+  docker-data:
